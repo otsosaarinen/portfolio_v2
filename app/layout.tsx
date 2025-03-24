@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import { Quicksand } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
 const quicksand = Quicksand({ subsets: ["latin"] });
+
+const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Otso Saarinen",
@@ -20,7 +23,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${quicksand.className} bg-(--background) text-(--foreground)`}
+                className={`${nunito.className} bg-(--background) text-(--foreground)`}
             >
                 {children}
             </body>
