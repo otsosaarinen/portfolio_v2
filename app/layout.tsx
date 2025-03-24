@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 
 const rubik = Rubik({ subsets: ["latin"] });
+
+const quicksand = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Otso Saarinen",
@@ -17,7 +20,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${rubik.className} bg-(--background) text-(--foreground)`}
+                className={`${quicksand.className} bg-(--background) text-(--foreground)`}
             >
                 {children}
             </body>
