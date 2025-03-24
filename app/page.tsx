@@ -36,8 +36,8 @@ export default function Home() {
 
                 <div className="flex flex-col justify-center items-center text-xl font-bold">
                     <div className="text-2xl">My Tech Stack</div>
-                    <div className="flex flex-row">
-                        <div className="text-2xl flex flex-col justify-start items-center gap-1 px-4 text-sky-500 font-semibold">
+                    <div className="flex flex-row gap-5">
+                        <div className="text-2xl flex flex-col justify-start items-center gap-1 text-sky-500 font-semibold">
                             Frontend
                             <Badge variant="outline">TypeScript</Badge>
                             <Badge variant="outline">JavaScript</Badge>
@@ -45,19 +45,19 @@ export default function Home() {
                             <Badge variant="outline">Next.js</Badge>
                             <Badge variant="outline">Tailwind CSS</Badge>
                         </div>
-                        <div className="text-2xl flex flex-col justify-start items-center gap-1 px-4 text-sky-500 font-semibold">
+                        <div className="text-2xl flex flex-col justify-start items-center gap-1 text-sky-500 font-semibold">
                             Backend
                             <Badge variant="outline">Node.js</Badge>
                             <Badge variant="outline">Express.js</Badge>
                             <Badge variant="outline">Python</Badge>
                         </div>
-                        <div className="text-2xl flex flex-col justify-start items-center gap-1 px-4 text-sky-500 font-semibold">
+                        <div className="text-2xl flex flex-col justify-start items-center gap-1 text-sky-500 font-semibold">
                             Cloud & database
                             <Badge variant="outline">Microsoft Azure</Badge>
                             <Badge variant="outline">Apache Kafka</Badge>
                             <Badge variant="outline">SQLite3</Badge>
                         </div>
-                        <div className="text-2xl flex flex-col justify-start items-center gap-1 px-4 text-sky-500 font-semibold">
+                        <div className="text-2xl flex flex-col justify-start items-center gap-1 text-sky-500 font-semibold">
                             Miscellaneous
                             <Badge variant="outline">REST API</Badge>
                             <Badge variant="outline">Gen AI</Badge>
@@ -67,6 +67,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
             <div className="h-[6vh] flex flex-row gap-3 justify-center items-center w-full bg-indigo-500 text-white">
                 <Link href={"https://vercel.com/home"}>Hosted on Vercel</Link>
                 {" | "}
