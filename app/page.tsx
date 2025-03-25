@@ -1,6 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Typewriter } from "react-simple-typewriter";
 import { Noto_Sans_JP } from "next/font/google";
@@ -32,11 +38,9 @@ export default function Home() {
             <div className="h-[94vh] w-auto m-0 flex flex-row flex-wrap justify-evenly items-center gap-15">
                 <div className="flex flex-col justify-center items-start gap-3">
                     <h1 className="text-2xl font-medium">Hey! My name is</h1>
-
                     <h1 className="text-8xl font-extrabold  bg-linear-to-r  from-sky-500 to-indigo-500 bg-clip-text text-transparent">
                         Otso Saarinen
                     </h1>
-
                     <h2 className="text-2xl font-medium">
                         ICT engineering student
                         <br />
@@ -55,8 +59,8 @@ export default function Home() {
                         </span>
                     </h2>
                 </div>
-                <div className="flex flex-col justify-center items-center">
-                    <div className="text-2xl font-medium">My Tech Stack</div>
+                <div className="flex flex-col justify-center items-start">
+                    <div className="text-2xl font-medium ">My Tech Stack</div>
                     <div className="flex flex-row gap-5">
                         {skills.map((skillset, index) => {
                             const skillType = Object.keys(skillset)[0];
@@ -65,7 +69,7 @@ export default function Home() {
                             return (
                                 <div
                                     key={index}
-                                    className="text-2xl flex flex-col justify-start items-center gap-1 text-indigo-500 font-semibold"
+                                    className="flex flex-col justify-start items-start gap-1 text-2xl font-semibold bg-linear-to-r  from-sky-500 to-indigo-500 bg-clip-text text-transparent "
                                 >
                                     <div>
                                         {skillType.charAt(0).toUpperCase() +
@@ -93,7 +97,6 @@ export default function Home() {
                     加盟国は
                 </div>*/}
             </div>
-
             <div className="h-[6vh] w-full flex flex-row gap-3 justify-center items-center bg-indigo-500 text-white">
                 <Link
                     href={"https://vercel.com/home"}
@@ -101,7 +104,7 @@ export default function Home() {
                 >
                     Hosted on Vercel
                 </Link>
-                <span>&#9675;</span>
+                <span>{"</>"}</span>
                 <Link
                     href={"https://github.com/otsosaarinen/portfolio_v2"}
                     className="hover:underline"
