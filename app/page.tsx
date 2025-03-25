@@ -1,12 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Typewriter } from "react-simple-typewriter";
 import { Noto_Sans_JP } from "next/font/google";
