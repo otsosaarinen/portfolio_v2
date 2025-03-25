@@ -107,9 +107,17 @@ export default function Home() {
             </div>
 
             <div className="h-[6vh] w-full flex flex-row gap-3 justify-center items-center bg-indigo-500 text-white">
-                <Link href={"https://vercel.com/home"}>Hosted on Vercel</Link>
+                <Link
+                    href={"https://vercel.com/home"}
+                    className="hover:underline"
+                >
+                    Hosted on Vercel
+                </Link>
                 <span>&#9675;</span>
-                <Link href={"https://github.com/otsosaarinen/portfolio_v2"}>
+                <Link
+                    href={"https://github.com/otsosaarinen/portfolio_v2"}
+                    className="hover:underline"
+                >
                     Source code
                 </Link>
             </div>
