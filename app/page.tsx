@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Typewriter } from "react-simple-typewriter";
-import { Noto_Sans_JP } from "next/font/google";
+//import { Noto_Sans_JP } from "next/font/google";
 
-const noto_sans_jp = Noto_Sans_JP({ subsets: ["latin"] });
+//const noto_sans_jp = Noto_Sans_JP({ subsets: ["latin"] });
 
 type SkillCategory = {
     [category: string]: string[];
