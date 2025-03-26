@@ -65,7 +65,7 @@ const projects: ProjectType = {
     Klemmari: [
         {
             Description:
-                "A web application featuring a GPT-4o-powered chatbot that assists users with settings adjustments, navigation, and answering questions. The language model is built using a RAG (Retrieval-Augmented Generation) model for optimal responses and is hosted on Microsoft Azure.",
+                "A web application featuring a GPT-4o-powered chatbot that assists users with settings adjustments, navigation, and answering questions. The language model is built using a RAG (Retrieval-Augmented Generation) model for optimal responses and is controlled through Microsoft Azure.",
             GitHub: "github.com/otsosaarinen/klemmari",
             Badges: [
                 "Microsoft Azure",
@@ -108,16 +108,16 @@ export default function Home() {
             </div>*/}
 
             <div className="h-[100vh] w-auto m-0 flex flex-row flex-wrap justify-evenly items-center">
-                <div className="flex flex-col justify-center items-start gap-3">
+                <div className="flex flex-col justify-center items-start gap-7">
                     <h1 className="text-2xl font-medium">Hey! My name is</h1>
-                    <h1 className="text-8xl font-extrabold  bg-linear-to-r  from-sky-500 to-indigo-500 bg-clip-text text-transparent">
+                    <h1 className="text-8xl font-extrabold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
                         Otso Saarinen
                     </h1>
                     <h2 className="text-2xl font-medium">
                         ICT engineering student
                         <br />
                         who likes building stuff with{" "}
-                        <span className="text-2xl font-semibold  bg-linear-to-r  from-sky-500 to-indigo-500 bg-clip-text text-transparent">
+                        <span className="text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
                             <Typewriter
                                 words={[
                                     "React",
@@ -131,6 +131,9 @@ export default function Home() {
                             />
                         </span>
                     </h2>
+                    <div className="text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 text-white p-2 animate-bounce">
+                        Scroll down to view my projects
+                    </div>
                 </div>
                 <div className="flex flex-col justify-center items-start">
                     <div className="text-2xl font-medium">My Tech Stack</div>
@@ -171,7 +174,7 @@ export default function Home() {
                                 className="flex flex-col justify-center items-center gap-2"
                                 key={projectKey}
                             >
-                                <div className="bg-neutral-100 border-neutral-200 border-solid border-3 rounded-lg p-2">
+                                <div className="bg-neutral-100 border-neutral-200 border-solid border-3 rounded-md p-2">
                                     {projectArray.map(
                                         (project, projectIndex) => (
                                             <div
