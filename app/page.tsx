@@ -1,6 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Typewriter } from "react-simple-typewriter";
 import { Noto_Sans_JP } from "next/font/google";
@@ -40,7 +52,7 @@ const projects: ProjectType = {
     "Spotify Web Controller": [
         {
             Description:
-                "Website that allows users to control their Spotify playback. User is authenticated using OAuth 2.0 protocol",
+                "A web application that allows users to control their Spotify playback. It utilizes the Spotify Developer API for managing playback, with user authentication handled via the OAuth 2.0 protocol.",
             GitHub: "github.com/otsosaarinen/spotify-web-controller",
             Badges: [
                 "TypeScript",
@@ -54,7 +66,7 @@ const projects: ProjectType = {
     Klemmari: [
         {
             Description:
-                "Web application that features GPT-4o powered chatbot. Chatbot assists user by changing settings, navigating pages and answering questions",
+                "A web application featuring a GPT-4o-powered chatbot that assists users with settings adjustments, navigation, and answering questions. The language model is built using a RAG (Retrieval-Augmented Generation) model for optimal responses and is hosted on Microsoft Azure.",
             GitHub: "github.com/otsosaarinen/klemmari",
             Badges: [
                 "Microsoft Azure",
@@ -69,7 +81,7 @@ const projects: ProjectType = {
     "My thesis": [
         {
             Description:
-                "My thesis focused on real-time patient data collection and analysis using the Apache Kafka platform. I also developed a prototype for healthcare utilizing Apache Kafka",
+                "My thesis focuses on real-time patient data collection and analysis using the Apache Kafka platform. As part of the research, I developed a prototype for healthcare that integrates Apache Kafka, Python, InfluxDB, and Grafana to enable real-time health data visualization.",
             GitHub: "github.com/otsosaarinen/thesis",
             Badges: [
                 "Apache Kafka",
@@ -131,7 +143,7 @@ export default function Home() {
                             return (
                                 <div
                                     key={index}
-                                    className="flex flex-col justify-start items-start gap-1 text-2xl font-semibold bg-linear-to-r  from-sky-500 to-indigo-500 bg-clip-text text-transparent"
+                                    className="flex flex-col justify-start items-start gap-1 text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent"
                                 >
                                     <div>{skillType}</div>
                                     {skillList.map((skill, skillIndex) => {
@@ -157,31 +169,61 @@ export default function Home() {
                     {Object.entries(projects).map(
                         ([projectKey, projectArray]) => (
                             <div
-                                className="p-2  bg-neutral-100 border-solid border-3 rounded-lg"
+                                className="flex flex-col justify-center items-center gap-2"
                                 key={projectKey}
                             >
-                                {projectArray.map((project, projectIndex) => (
-                                    <div
-                                        className="flex flex-col gap-2"
-                                        key={projectIndex}
-                                    >
-                                        <span className="text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
-                                            {projectKey}
-                                        </span>
-                                        <span className="flex flex-row flex-wrap gap-1">
-                                            {project.Badges.map(
-                                                (badge, badgeIndex) => (
-                                                    <Badge
-                                                        key={badgeIndex}
-                                                        className="text-base"
-                                                        variant={"outline"}
-                                                    >
-                                                        {badge}
-                                                    </Badge>
-                                                )
-                                            )}
-                                        </span>
-                                    </div>
+                                <div className="bg-neutral-100 border-neutral-200 border-solid border-3 rounded-lg p-2">
+                                    {projectArray.map(
+                                        (project, projectIndex) => (
+                                            <div
+                                                className="flex flex-col gap-2"
+                                                key={projectIndex}
+                                            >
+                                                <span className="text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
+                                                    {projectKey}
+                                                </span>
+                                                <span className="flex flex-row flex-wrap gap-1">
+                                                    {project.Badges.map(
+                                                        (badge, badgeIndex) => (
+                                                            <Badge
+                                                                key={badgeIndex}
+                                                                className="text-base bg-white"
+                                                                variant={
+                                                                    "outline"
+                                                                }
+                                                            >
+                                                                {badge}
+                                                            </Badge>
+                                                        )
+                                                    )}
+                                                </span>
+                                            </div>
+                                        )
+                                    )}
+                                </div>
+                                {projectArray.map((project, index) => (
+                                    <AlertDialog key={index}>
+                                        <AlertDialogTrigger asChild>
+                                            <Button variant="outline">
+                                                Read more
+                                            </Button>
+                                        </AlertDialogTrigger>
+                                        <AlertDialogContent>
+                                            <AlertDialogHeader>
+                                                <AlertDialogTitle>
+                                                    {projectKey}
+                                                </AlertDialogTitle>
+                                                <AlertDialogDescription>
+                                                    {project.Description}
+                                                </AlertDialogDescription>
+                                            </AlertDialogHeader>
+                                            <AlertDialogFooter>
+                                                <AlertDialogAction>
+                                                    Close
+                                                </AlertDialogAction>
+                                            </AlertDialogFooter>
+                                        </AlertDialogContent>
+                                    </AlertDialog>
                                 ))}
                             </div>
                         )
