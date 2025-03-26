@@ -13,7 +13,7 @@ type SkillType = {
 
 const skills: SkillType[] = [
     {
-        frontend: [
+        Frontend: [
             "TypeScript",
             "JavaScript",
             "React",
@@ -21,46 +21,66 @@ const skills: SkillType[] = [
             "TailwindCSS",
         ],
     },
-    { backend: ["Node.js", "Express.js", "Python"] },
-    { "cloud & database": ["Apache Kafka", "Microsoft Azure", "SQLite3"] },
-    { miscellaneous: ["REST API", "OAuth 2.0", "GitHub", "Gen AI", "Grafana"] },
+    { Backend: ["Node.js", "Express.js", "Python"] },
+    { "Cloud & database": ["Apache Kafka", "Microsoft Azure", "SQLite3"] },
+    { Miscellaneous: ["REST API", "OAuth 2.0", "GitHub", "Gen AI", "Grafana"] },
 ];
 
 type ProjectItem = {
-    Title: string;
     Description: string;
     GitHub: string;
+    Badges: string[];
 };
 
 type ProjectType = {
     [project: string]: ProjectItem[];
 };
 
-const projects: ProjectType[] = [
-    {
-        "spotify-web-controller": [
-            {
-                Title: "Spotify Web Controller",
-                Description: "123",
-                GitHub: "https://github.com/otsosaarinen/spotify-web-controller",
-            },
-        ],
-        klemmari: [
-            {
-                Title: "Klemmari",
-                Description: "asd",
-                GitHub: "https://github.com/otsosaarinen/klemmari",
-            },
-        ],
-        thesis: [
-            {
-                Title: "My thesis",
-                Description: "rrrraradadad",
-                GitHub: "https://github.com/otsosaarinen/thesis",
-            },
-        ],
-    },
-];
+const projects: ProjectType = {
+    "Spotify Web Controller": [
+        {
+            Description:
+                "Website that allows users to control their Spotify playback. User is authenticated using OAuth 2.0 protocol",
+            GitHub: "github.com/otsosaarinen/spotify-web-controller",
+            Badges: [
+                "TypeScript",
+                "React",
+                "Tailwind CSS",
+                "Spotify API",
+                "OAuth 2.0",
+            ],
+        },
+    ],
+    Klemmari: [
+        {
+            Description:
+                "Web application that features GPT-4o powered chatbot. Chatbot assists user by changing settings, navigating pages and answering questions",
+            GitHub: "github.com/otsosaarinen/klemmari",
+            Badges: [
+                "Microsoft Azure",
+                "OpenAI",
+                "Gen AI",
+                "JavaScript",
+                "React",
+                "Python",
+            ],
+        },
+    ],
+    "My thesis": [
+        {
+            Description:
+                "My thesis focused on real-time patient data collection and analysis using the Apache Kafka platform. I also developed a prototype for healthcare utilizing Apache Kafka",
+            GitHub: "github.com/otsosaarinen/thesis",
+            Badges: [
+                "Apache Kafka",
+                "Python",
+                "InfluxDB",
+                "Grafana",
+                " Real-time Analytics",
+            ],
+        },
+    ],
+};
 
 export default function Home() {
     return (
@@ -70,7 +90,7 @@ export default function Home() {
                 >
                     加盟国は
                 </div>*/}
-            <div className="h-[94vh] w-auto m-0 flex flex-row flex-wrap justify-evenly items-center gap-15">
+            <div className="h-[100vh] w-auto m-0 flex flex-row flex-wrap justify-evenly items-center">
                 <div className="flex flex-col justify-center items-start gap-3">
                     <h1 className="text-2xl font-medium">Hey! My name is</h1>
                     <h1 className="text-8xl font-extrabold  bg-linear-to-r  from-sky-500 to-indigo-500 bg-clip-text text-transparent">
@@ -86,6 +106,7 @@ export default function Home() {
                                     "React",
                                     "Next.js",
                                     "Tailwind CSS",
+                                    "Azure",
                                     "Node.js",
                                     "TypeScript",
                                 ]}
@@ -95,7 +116,7 @@ export default function Home() {
                     </h2>
                 </div>
                 <div className="flex flex-col justify-center items-start">
-                    <div className="text-2xl font-medium ">My Tech Stack</div>
+                    <div className="text-2xl font-medium">My Tech Stack</div>
                     <div className="flex flex-row gap-3">
                         {skills.map((skilltype, index) => {
                             const skillType = Object.keys(skilltype)[0];
@@ -104,12 +125,9 @@ export default function Home() {
                             return (
                                 <div
                                     key={index}
-                                    className="flex flex-col justify-start items-start gap-1 text-2xl font-semibold bg-linear-to-r  from-sky-500 to-indigo-500 bg-clip-text text-transparent "
+                                    className="flex flex-col justify-start items-start gap-1 text-2xl font-semibold bg-linear-to-r  from-sky-500 to-indigo-500 bg-clip-text text-transparent"
                                 >
-                                    <div>
-                                        {skillType.charAt(0).toUpperCase() +
-                                            skillType.slice(1)}
-                                    </div>
+                                    <div>{skillType}</div>
                                     {skillList.map((skill, skillIndex) => {
                                         return (
                                             <Badge
@@ -125,6 +143,40 @@ export default function Home() {
                             );
                         })}
                     </div>
+                </div>
+            </div>
+            <div className="h-[94vh] w-auto m-0 flex flex-col justify-center items-center gap-3">
+                <div className="text-2xl font-medium">My projects</div>
+                <div className="flex flex-row flex-wrap gap-3">
+                    {Object.entries(projects).map(
+                        ([projectKey, projectArray]) => (
+                            <div
+                                className="border-solid border-indigo-500 border-3 rounded-lg p-2"
+                                key={projectKey}
+                            >
+                                {projectArray.map((project, projectIndex) => (
+                                    <div
+                                        className="flex flex-col"
+                                        key={projectIndex}
+                                    >
+                                        <span className="text-2xl font-semibold bg-linear-to-r  from-sky-500 to-indigo-500 bg-clip-text text-transparent ">
+                                            {projectKey}
+                                        </span>
+                                        <span>
+                                            {project.Badges.map(
+                                                (badge, BadgeIndex) => {
+                                                    <Badge key={BadgeIndex}>
+                                                        {badge}
+                                                    </Badge>;
+                                                }
+                                            )}
+                                        </span>
+                                        <div>Show project</div>
+                                    </div>
+                                ))}
+                            </div>
+                        )
+                    )}
                 </div>
             </div>
             <div className="h-[6vh] w-full flex flex-row gap-3 justify-center items-center bg-indigo-500 text-white">
