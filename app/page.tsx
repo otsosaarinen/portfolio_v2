@@ -15,9 +15,9 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Typewriter } from "react-simple-typewriter";
-import { Noto_Sans_JP } from "next/font/google";
 
-const noto_sans_jp = Noto_Sans_JP({ subsets: ["latin"] });
+//import { Noto_Sans_JP } from "next/font/google";
+//const noto_sans_jp = Noto_Sans_JP({ subsets: ["latin"] });
 
 type SkillType = {
     [skill: string]: string[];
@@ -97,7 +97,7 @@ const projects: ProjectType = {
 export default function Home() {
     return (
         <>
-            <div
+            {/*<div
                 className={`${noto_sans_jp.className} text-8xl text-neutral-200 font-semibold overflow-hidden`}
             >
                 <div className="absolute right-10 [writing-mode:vertical-lr] ">
@@ -106,7 +106,7 @@ export default function Home() {
                 </div>
                 <div className="absolute left-0 top-200 ">開発者</div>
                 <div className="absolute left-0 top-0">ソフト</div>
-            </div>
+            </div>*/}
 
             <div className="h-[100vh] w-auto m-0 flex flex-row flex-wrap justify-evenly items-center">
                 <div className="flex flex-col justify-center items-start gap-3">
