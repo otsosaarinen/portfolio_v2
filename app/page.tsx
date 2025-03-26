@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Typewriter } from "react-simple-typewriter";
 import { Noto_Sans_JP } from "next/font/google";
 
-const noto_sans_jp = Noto_Sans_JP({});
+const noto_sans_jp = Noto_Sans_JP({ subsets: ["latin"] });
 
 type SkillType = {
     [skill: string]: string[];
