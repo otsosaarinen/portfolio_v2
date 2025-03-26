@@ -151,27 +151,30 @@ export default function Home() {
                     {Object.entries(projects).map(
                         ([projectKey, projectArray]) => (
                             <div
-                                className="border-solid border-indigo-500 border-3 rounded-lg p-2"
+                                className="p-2  bg-neutral-100 border-solid border-3 rounded-lg"
                                 key={projectKey}
                             >
                                 {projectArray.map((project, projectIndex) => (
                                     <div
-                                        className="flex flex-col"
+                                        className="flex flex-col gap-2"
                                         key={projectIndex}
                                     >
-                                        <span className="text-2xl font-semibold bg-linear-to-r  from-sky-500 to-indigo-500 bg-clip-text text-transparent ">
+                                        <span className="text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
                                             {projectKey}
                                         </span>
-                                        <span>
+                                        <span className="flex flex-row flex-wrap gap-1">
                                             {project.Badges.map(
-                                                (badge, BadgeIndex) => {
-                                                    <Badge key={BadgeIndex}>
+                                                (badge, badgeIndex) => (
+                                                    <Badge
+                                                        key={badgeIndex}
+                                                        className="text-base"
+                                                        variant={"outline"}
+                                                    >
                                                         {badge}
-                                                    </Badge>;
-                                                }
+                                                    </Badge>
+                                                )
                                             )}
                                         </span>
-                                        <div>Show project</div>
                                     </div>
                                 ))}
                             </div>
