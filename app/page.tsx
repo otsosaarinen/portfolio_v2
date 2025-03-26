@@ -7,11 +7,11 @@ import { Typewriter } from "react-simple-typewriter";
 
 //const noto_sans_jp = Noto_Sans_JP({ subsets: ["latin"] });
 
-type SkillCategory = {
-    [category: string]: string[];
+type SkillType = {
+    [skill: string]: string[];
 };
 
-const skills: SkillCategory[] = [
+const skills: SkillType[] = [
     {
         frontend: [
             "TypeScript",
@@ -23,12 +23,53 @@ const skills: SkillCategory[] = [
     },
     { backend: ["Node.js", "Express.js", "Python"] },
     { "cloud & database": ["Apache Kafka", "Microsoft Azure", "SQLite3"] },
-    { miscellaneous: ["REST API", "GitHub", "Gen AI", "Grafana"] },
+    { miscellaneous: ["REST API", "OAuth 2.0", "GitHub", "Gen AI", "Grafana"] },
+];
+
+type ProjectItem = {
+    Title: string;
+    Description: string;
+    GitHub: string;
+};
+
+type ProjectType = {
+    [project: string]: ProjectItem[];
+};
+
+const projects: ProjectType[] = [
+    {
+        "spotify-web-controller": [
+            {
+                Title: "Spotify Web Controller",
+                Description: "123",
+                GitHub: "https://github.com/otsosaarinen/spotify-web-controller",
+            },
+        ],
+        klemmari: [
+            {
+                Title: "Klemmari",
+                Description: "asd",
+                GitHub: "https://github.com/otsosaarinen/klemmari",
+            },
+        ],
+        thesis: [
+            {
+                Title: "My thesis",
+                Description: "rrrraradadad",
+                GitHub: "https://github.com/otsosaarinen/thesis",
+            },
+        ],
+    },
 ];
 
 export default function Home() {
     return (
         <>
+            {/*<div
+                    className={`${noto_sans_jp.className} text-9xl [writing-mode:vertical-lr] text-neutral-300`}
+                >
+                    加盟国は
+                </div>*/}
             <div className="h-[94vh] w-auto m-0 flex flex-row flex-wrap justify-evenly items-center gap-15">
                 <div className="flex flex-col justify-center items-start gap-3">
                     <h1 className="text-2xl font-medium">Hey! My name is</h1>
@@ -56,9 +97,9 @@ export default function Home() {
                 <div className="flex flex-col justify-center items-start">
                     <div className="text-2xl font-medium ">My Tech Stack</div>
                     <div className="flex flex-row gap-3">
-                        {skills.map((skillset, index) => {
-                            const skillType = Object.keys(skillset)[0];
-                            const skillList = skillset[skillType];
+                        {skills.map((skilltype, index) => {
+                            const skillType = Object.keys(skilltype)[0];
+                            const skillList = skilltype[skillType];
 
                             return (
                                 <div
@@ -85,11 +126,6 @@ export default function Home() {
                         })}
                     </div>
                 </div>
-                {/*<div
-                    className={`${noto_sans_jp.className} text-9xl [writing-mode:vertical-lr] text-neutral-300`}
-                >
-                    加盟国は
-                </div>*/}
             </div>
             <div className="h-[6vh] w-full flex flex-row gap-3 justify-center items-center bg-indigo-500 text-white">
                 <Link
