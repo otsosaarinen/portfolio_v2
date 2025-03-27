@@ -71,75 +71,62 @@ const projects: ProjectType = {
 export default function Projects() {
     return (
         <>
-            <div className="h-[95vh] w-auto m-0 flex flex-col justify-center items-center gap-3">
+            <div className="h-[95vh] w-auto m-0 flex flex-col justify-center items-center gap-5">
                 <div className="text-2xl font-medium">My projects</div>
+
                 <div className="flex flex-col flex-wrap gap-10">
                     {Object.entries(projects).map(
                         ([projectKey, projectArray]) => (
                             <div
-                                className="flex flex-col justify-center items-start gap-2"
+                                className="flex flex-col items-start gap-2"
                                 key={projectKey}
                             >
-                                <div className="">
-                                    {projectArray.map(
-                                        (project, projectIndex) => (
-                                            <div
-                                                className="flex flex-col gap-2 "
-                                                key={projectIndex}
+                                <div className="text-2xl font-semibold bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
+                                    {projectKey}
+                                </div>
+                                <div className="flex flex-row flex-wrap gap-2">
+                                    {projectArray[0].Badges.map(
+                                        (badge, index) => (
+                                            <Badge
+                                                key={index}
+                                                className="text-base border-indigo-500"
+                                                variant="secondary"
                                             >
-                                                <div className="text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
-                                                    {projectKey}
-                                                </div>
-                                                <div className="flex flex-row flex-wrap gap-1">
-                                                    {project.Badges.map(
-                                                        (badge, badgeIndex) => (
-                                                            <Badge
-                                                                key={badgeIndex}
-                                                                className="text-base border-indigo-500"
-                                                                variant={
-                                                                    "secondary"
-                                                                }
-                                                            >
-                                                                {badge}
-                                                            </Badge>
-                                                        )
-                                                    )}
-                                                </div>
-                                            </div>
+                                                {badge}
+                                            </Badge>
                                         )
                                     )}
                                 </div>
-                                {projectArray.map((project, index) => (
-                                    <AlertDialog key={index}>
-                                        <AlertDialogTrigger asChild>
-                                            <Button
-                                                className="hover:cursor-pointer"
-                                                variant="outline"
-                                            >
-                                                Read more
-                                            </Button>
-                                        </AlertDialogTrigger>
-                                        <AlertDialogContent>
-                                            <AlertDialogHeader>
-                                                <AlertDialogTitle>
-                                                    {projectKey}
-                                                </AlertDialogTitle>
-                                                <AlertDialogDescription>
-                                                    {project.Description}
-                                                </AlertDialogDescription>
-                                            </AlertDialogHeader>
-                                            <AlertDialogFooter>
-                                                <AlertDialogAction>
-                                                    Close
-                                                </AlertDialogAction>
-                                            </AlertDialogFooter>
-                                        </AlertDialogContent>
-                                    </AlertDialog>
-                                ))}
+                                <AlertDialog>
+                                    <AlertDialogTrigger asChild>
+                                        <Button
+                                            className="hover:cursor-pointer"
+                                            variant="outline"
+                                        >
+                                            Read more
+                                        </Button>
+                                    </AlertDialogTrigger>
+                                    <AlertDialogContent>
+                                        <AlertDialogHeader>
+                                            <AlertDialogTitle>
+                                                {projectKey}
+                                            </AlertDialogTitle>
+                                            <AlertDialogDescription>
+                                                {projectArray[0].Description}
+                                            </AlertDialogDescription>
+                                        </AlertDialogHeader>
+                                        <AlertDialogFooter>
+                                            <AlertDialogAction>
+                                                Close
+                                            </AlertDialogAction>
+                                        </AlertDialogFooter>
+                                    </AlertDialogContent>
+                                </AlertDialog>
                             </div>
                         )
                     )}
                 </div>
+
                 <div className="p-2 text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 text-white hover:cursor-pointer">
                     <Link href="/">Go back</Link>
                 </div>
