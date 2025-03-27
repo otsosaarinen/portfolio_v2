@@ -27,7 +27,7 @@ const projects: ProjectType = {
         {
             Description:
                 "A web application that allows users to control their Spotify playback. It utilizes the Spotify Developer API for managing playback, with user authentication handled via the OAuth 2.0 protocol.",
-            GitHub: "github.com/otsosaarinen/spotify-web-controller",
+            GitHub: "https://github.com/otsosaarinen/spotify-web-controller",
             Badges: [
                 "TypeScript",
                 "Spotify API",
@@ -41,7 +41,7 @@ const projects: ProjectType = {
         {
             Description:
                 "A web application featuring a GPT-4o-powered chatbot that assists users with settings adjustments, navigation, and answering questions. The language model is built using a RAG (Retrieval-Augmented Generation) model for optimal responses and is controlled through Microsoft Azure.",
-            GitHub: "github.com/otsosaarinen/klemmari",
+            GitHub: "https://github.com/otsosaarinen/klemmari",
             Badges: [
                 "Microsoft Azure",
                 "Generative AI",
@@ -56,13 +56,28 @@ const projects: ProjectType = {
         {
             Description:
                 "My thesis focuses on real-time patient data collection and analysis using the Apache Kafka platform. As part of the research, I developed a prototype for healthcare that integrates Apache Kafka, Python, InfluxDB, and Grafana to enable real-time health data visualization.",
-            GitHub: "github.com/otsosaarinen/thesis",
+            GitHub: "https://github.com/otsosaarinen/thesis",
             Badges: [
                 "Apache Kafka",
                 "Python",
                 "InfluxDB",
                 "Grafana",
                 "Real-time Analytics",
+            ],
+        },
+    ],
+    "9ways": [
+        {
+            Description:
+                "Developed a transportation application for Abuja, Nigeria as a part of Turku UAS Innovation project. Website tracks the local buses and timetables. User can also search for routes through the website.",
+            GitHub: "https://github.com/otsosaarinen/9ways",
+            Badges: [
+                "Leaflet",
+                "Node.js",
+                "Express.js",
+                "JavaScript",
+                "HTML5",
+                "CSS3",
             ],
         },
     ],
