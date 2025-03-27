@@ -1,0 +1,90 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import LinkedInLogo from "../../public/LinkedIn logo.png";
+import GitHubLogo from "../../public/GitHub logo.png";
+import { Badge } from "@/components/ui/badge";
+import { Typewriter } from "react-simple-typewriter";
+
+type SkillType = {
+    [skill: string]: string[];
+};
+
+const skills: SkillType[] = [
+    {
+        Frontend: [
+            "TypeScript",
+            "JavaScript",
+            "React",
+            "Next.js",
+            "TailwindCSS",
+        ],
+    },
+    { Backend: ["Node.js", "Express.js", "Python"] },
+    { "Cloud & database": ["Apache Kafka", "Microsoft Azure", "SQLite3"] },
+    { Miscellaneous: ["REST API", "OAuth 2.0", "Gen AI", "Grafana", "GitHub"] },
+];
+
+export default function Test() {
+    return (
+        <>
+            <div className="grid grid-cols-2 gap-4">
+                <div className="border-red-300 border-3 text-2xl font-medium">
+                    Hey! My name is
+                </div>
+                <div className="col-span-2 border-blue-300 border-3 text-8xl font-extrabold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
+                    Otso Saarinen
+                </div>
+                <div className="border-red-300 border-3 flex justify-start">
+                    <div className="text-2xl font-medium">
+                        ICT engineering student <br /> who likes building stuff
+                        with{" "}
+                        <span className="text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
+                            <Typewriter
+                                words={[
+                                    "React",
+                                    "Next.js",
+                                    "Tailwind CSS",
+                                    "Azure",
+                                    "Node.js",
+                                    "TypeScript",
+                                ]}
+                                typeSpeed={80}
+                            />
+                        </span>
+                    </div>
+                </div>
+                <div className="border-red-300 border-3 flex flex-col justify-center">
+                    <div>My Tech Stack</div>
+                    <div className="flex flex-row flex-wrap gap-3">
+                        {skills.map((skilltype, index) => {
+                            const skillType = Object.keys(skilltype)[0];
+                            const skillList = skilltype[skillType];
+
+                            return (
+                                <div
+                                    key={index}
+                                    className="flex flex-col justify-start items-start gap-1 text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent"
+                                >
+                                    <div>{skillType}</div>
+                                    {skillList.map((skill, skillIndex) => {
+                                        return (
+                                            <Badge
+                                                key={skillIndex}
+                                                className="text-base border-indigo-500"
+                                                variant="secondary"
+                                            >
+                                                {skill}
+                                            </Badge>
+                                        );
+                                    })}
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}
