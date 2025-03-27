@@ -58,21 +58,24 @@ export default function Home() {
                             Click here to view my projects
                         </Link>
                     </div>
-                    <div className="flex gap-3">
-                        <Image
-                            src={GitHubLogo}
-                            alt="GitHub logo"
-                            width={50}
-                            height={50}
-                            className="object-contain"
-                        />
-                        <Image
-                            src={LinkedInLogo}
-                            alt="LinkedIn logo"
-                            width={50}
-                            height={50}
-                            className="object-contain"
-                        />
+                    <div className="flex flex-col gap-3">
+                        <div className="text-2xl font-medium">Contact me</div>
+                        <div className="flex flex-row gap-5">
+                            <Image
+                                src={GitHubLogo}
+                                alt="GitHub logo"
+                                width={50}
+                                height={50}
+                                className="object-contain"
+                            />
+                            <Image
+                                src={LinkedInLogo}
+                                alt="LinkedIn logo"
+                                width={50}
+                                height={50}
+                                className="object-contain"
+                            />
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-col justify-center items-start">
