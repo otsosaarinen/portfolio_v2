@@ -17,9 +17,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${poppins.className} text-neutral-800 bg-white`}>
-                {children}
-                <div className="h-[5vh] w-full flex flex-row gap-3 justify-center items-center bg-indigo-500 text-white">
+            <body
+                className={`${poppins.className} flex flex-col min-h-screen text-neutral-800 bg-white`}
+            >
+                <main className="flex flex-grow justify-center items-center">
+                    {children}
+                </main>
+                <footer className="h-[7.5vh] w-full flex flex-row gap-3 justify-center items-center bg-indigo-500 text-white">
                     <Link
                         href={"https://vercel.com/home"}
                         className="hover:underline"
@@ -33,7 +37,7 @@ export default function RootLayout({
                     >
                         Source code
                     </Link>
-                </div>
+                </footer>
             </body>
         </html>
     );

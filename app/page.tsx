@@ -29,7 +29,7 @@ const skills: SkillType[] = [
 export default function Home() {
     return (
         <>
-            <div className="h-[95vh] w-auto m-0 flex flex-row flex-wrap justify-evenly items-center">
+            <div className="m-0 flex flex-row flex-wrap justify-evenly items-center">
                 <div className="flex flex-col justify-center items-start gap-7">
                     <h1 className="text-2xl font-medium">Hey! My name is</h1>
                     <h1 className="text-8xl font-extrabold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
