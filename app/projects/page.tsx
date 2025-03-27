@@ -23,20 +23,6 @@ type ProjectType = {
 };
 
 const projects: ProjectType = {
-    "Spotify Web Controller": [
-        {
-            Description:
-                "A web application that allows users to control their Spotify playback. It utilizes the Spotify Developer API for managing playback, with user authentication handled via the OAuth 2.0 protocol.",
-            GitHub: "https://github.com/otsosaarinen/spotify-web-controller",
-            Badges: [
-                "TypeScript",
-                "Spotify API",
-                "OAuth 2.0",
-                "React",
-                "Tailwind CSS",
-            ],
-        },
-    ],
     Klemmari: [
         {
             Description:
@@ -52,7 +38,7 @@ const projects: ProjectType = {
             ],
         },
     ],
-    "My thesis": [
+    Thesis: [
         {
             Description:
                 "My thesis focuses on real-time patient data collection and analysis using the Apache Kafka platform. As part of the research, I developed a prototype for healthcare that integrates Apache Kafka, Python, InfluxDB, and Grafana to enable real-time health data visualization.",
@@ -63,6 +49,20 @@ const projects: ProjectType = {
                 "InfluxDB",
                 "Grafana",
                 "Real-time Analytics",
+            ],
+        },
+    ],
+    "Spotify Web Controller": [
+        {
+            Description:
+                "A web application that allows users to control their Spotify playback. It utilizes the Spotify Developer API for managing playback, with user authentication handled via the OAuth 2.0 protocol.",
+            GitHub: "https://github.com/otsosaarinen/spotify-web-controller",
+            Badges: [
+                "TypeScript",
+                "Spotify API",
+                "OAuth 2.0",
+                "React",
+                "Tailwind CSS",
             ],
         },
     ],
