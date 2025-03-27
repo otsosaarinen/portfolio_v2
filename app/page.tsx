@@ -64,7 +64,7 @@ export default function Home() {
                             />
                         </span>
                     </h2>
-                    <div className="text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 text-white p-2 hover:cursor-pointer">
+                    <div className="p-2 text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 text-white hover:cursor-pointer">
                         <Link href="/projects">
                             Click here to view my projects
                         </Link>

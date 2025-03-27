@@ -140,6 +140,9 @@ export default function Projects() {
                         )
                     )}
                 </div>
+                <div className="p-2 text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 text-white hover:cursor-pointer">
+                    <Link href="/">Go back</Link>
+                </div>
             </div>
             <div className="h-[5vh] w-full flex flex-row gap-3 justify-center items-center bg-indigo-500 text-white">
                 <Link
