@@ -86,7 +86,7 @@ const projects: ProjectType = {
 export default function Projects() {
     return (
         <>
-            <div className="h-[95vh] w-auto m-0 flex flex-col justify-center items-center gap-5">
+            <div className="min-h-screen w-auto my-10 flex flex-col justify-center items-center gap-10">
                 <div className="text-2xl font-medium">My projects</div>
 
                 <div className="flex flex-col flex-wrap gap-7.5">
