@@ -84,7 +84,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col justify-center items-start">
                     <div className="text-2xl font-medium">My Tech Stack</div>
-                    <div className="flex flex-row gap-3">
+                    <div className="flex flex-row flex-wrap gap-3">
                         {skills.map((skilltype, index) => {
                             const skillType = Object.keys(skilltype)[0];
                             const skillList = skilltype[skillType];
