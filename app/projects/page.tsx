@@ -74,11 +74,11 @@ export default function Projects() {
             <div className="h-[95vh] w-auto m-0 flex flex-col justify-center items-center gap-5">
                 <div className="text-2xl font-medium">My projects</div>
 
-                <div className="flex flex-col flex-wrap gap-10">
+                <div className="flex flex-col flex-wrap gap-7.5">
                     {Object.entries(projects).map(
                         ([projectKey, projectArray]) => (
                             <div
-                                className="flex flex-col items-start gap-2"
+                                className="flex flex-col items-start gap-2 border-transparent border-b-indigo-500 border-1 py-3"
                                 key={projectKey}
                             >
                                 <div className="text-2xl font-semibold bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
