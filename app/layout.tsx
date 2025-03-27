@@ -28,13 +28,6 @@ export default function RootLayout({
                     </Link>
                     <span>{"</>"}</span>
                     <Link
-                        href={"https://github.com/otsosaarinen"}
-                        className="hover:underline"
-                    >
-                        GitHub
-                    </Link>
-                    <span>{"</>"}</span>
-                    <Link
                         href={"https://github.com/otsosaarinen/portfolio_v2"}
                         className="hover:underline"
                     >
