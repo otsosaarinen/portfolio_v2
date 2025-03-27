@@ -61,20 +61,24 @@ export default function Home() {
                     <div className="flex flex-col gap-3">
                         <div className="text-2xl font-medium">Contact me</div>
                         <div className="flex flex-row gap-5">
-                            <Image
-                                src={GitHubLogo}
-                                alt="GitHub logo"
-                                width={50}
-                                height={50}
-                                className="object-contain"
-                            />
-                            <Image
-                                src={LinkedInLogo}
-                                alt="LinkedIn logo"
-                                width={50}
-                                height={50}
-                                className="object-contain"
-                            />
+                            <Link href="https://github.com/otsosaarinen">
+                                <Image
+                                    src={GitHubLogo}
+                                    alt="GitHub logo"
+                                    width={50}
+                                    height={50}
+                                    className="object-contain"
+                                />
+                            </Link>
+                            <Link href="https://www.linkedin.com/in/otsosaarinen/">
+                                <Image
+                                    src={LinkedInLogo}
+                                    alt="LinkedIn logo"
+                                    width={50}
+                                    height={50}
+                                    className="object-contain"
+                                />
+                            </Link>
                         </div>
                     </div>
                 </div>
