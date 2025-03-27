@@ -1,17 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import {
-    AlertDialog,
-    AlertDialogAction,
-    AlertDialogContent,
-    AlertDialogDescription,
-    AlertDialogFooter,
-    AlertDialogHeader,
-    AlertDialogTitle,
-    AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -75,7 +64,7 @@ export default function Home() {
                             />
                         </span>
                     </h2>
-                    <div className="text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 text-white p-2 animate-bounce hover:cursor-pointer">
+                    <div className="text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 text-white p-2 hover:cursor-pointer">
                         <Link href="/projects">
                             Click here to view my projects
                         </Link>
