@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import LinkedInLogo from "../public/linkedinlogo.png";
+import LinkedInLogo from "../public/LinkedIn logo.png";
+import GitHubLogo from "../public/GitHub logo.png";
 import { Badge } from "@/components/ui/badge";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -57,11 +58,20 @@ export default function Home() {
                             Click here to view my projects
                         </Link>
                     </div>
-                    <div>
+                    <div className="flex gap-3">
                         <Image
                             src={LinkedInLogo}
                             alt="LinkedIn logo"
                             width={50}
+                            height={50}
+                            className="object-contain"
+                        />
+                        <Image
+                            src={GitHubLogo}
+                            alt="GitHub logo"
+                            width={50}
+                            height={50}
+                            className="object-contain"
                         />
                     </div>
                 </div>
