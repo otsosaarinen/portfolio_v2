@@ -23,7 +23,7 @@ const skills: SkillType[] = [
     },
     { Backend: ["Node.js", "Express.js", "Python"] },
     { "Cloud & database": ["Apache Kafka", "Microsoft Azure", "SQLite3"] },
-    { Miscellaneous: ["REST API", "OAuth 2.0", "GitHub", "Gen AI", "Grafana"] },
+    { Miscellaneous: ["REST API", "OAuth 2.0", "Gen AI", "Grafana", "GitHub"] },
 ];
 
 export default function Home() {
