@@ -60,15 +60,15 @@ export default function Home() {
                     </div>
                     <div className="flex gap-3">
                         <Image
-                            src={LinkedInLogo}
-                            alt="LinkedIn logo"
+                            src={GitHubLogo}
+                            alt="GitHub logo"
                             width={50}
                             height={50}
                             className="object-contain"
                         />
                         <Image
-                            src={GitHubLogo}
-                            alt="GitHub logo"
+                            src={LinkedInLogo}
+                            alt="LinkedIn logo"
                             width={50}
                             height={50}
                             className="object-contain"
