@@ -20,10 +20,10 @@ export default function RootLayout({
             <body
                 className={`${poppins.className} flex flex-col min-h-screen text-neutral-800 bg-white`}
             >
-                <main className="flex flex-grow justify-center items-center">
+                <main className="p-5 flex flex-grow justify-center items-center">
                     {children}
                 </main>
-                <footer className="h-[7.5vh] w-full flex flex-row gap-3 justify-center items-center bg-indigo-500 text-white">
+                <footer className="h-auto w-full py-4 flex flex-row gap-3 justify-center items-center bg-indigo-500 text-white">
                     <Link
                         href={"https://vercel.com/home"}
                         className="hover:underline"
