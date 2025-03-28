@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import LinkedInLogo from "../public/LinkedIn logo.png";
+import GitHubLogo from "../public/GitHub logo.png";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -23,7 +26,7 @@ export default function RootLayout({
                 <main className="p-5 flex flex-grow justify-center items-center">
                     {children}
                 </main>
-                <footer className="h-auto w-full py-4 flex flex-row gap-3 justify-center items-center bg-indigo-500 text-white">
+                <footer className="h-auto w-full py-4 flex flex-row gap-4 justify-center items-center bg-indigo-500 text-white">
                     <Link
                         href={"https://vercel.com/home"}
                         className="hover:underline"
@@ -36,6 +39,25 @@ export default function RootLayout({
                         className="hover:underline"
                     >
                         Source code
+                    </Link>
+                    <span>{"</>"}</span>
+                    <Link href="https://github.com/otsosaarinen">
+                        <Image
+                            src={GitHubLogo}
+                            alt="GitHub logo"
+                            width={30}
+                            height={30}
+                            className="object-contain"
+                        />
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/otsosaarinen/">
+                        <Image
+                            src={LinkedInLogo}
+                            alt="LinkedIn logo"
+                            width={30}
+                            height={30}
+                            className="object-contain"
+                        />
                     </Link>
                 </footer>
             </body>
