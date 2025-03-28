@@ -29,14 +29,14 @@ const skills: SkillType[] = [
 export default function Test() {
     return (
         <>
-            <div className="grid grid-cols-2 gap-4">
-                <div className="border-red-300 border-3 text-2xl font-medium">
+            <div className="grid grid-cols-2 gap-x-10 gap-y-2">
+                <div className="col-span-2 text-2xl font-medium">
                     Hey! My name is
                 </div>
-                <div className="col-span-2 border-blue-300 border-3 text-8xl font-extrabold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
+                <div className="col-span-2 text-8xl font-extrabold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent border-transparent border-b-indigo-500 border-2">
                     Otso Saarinen
                 </div>
-                <div className="border-red-300 border-3 flex justify-start">
+                <div className="flex justify-start items-center">
                     <div className="text-2xl font-medium">
                         ICT engineering student <br /> who likes building stuff
                         with{" "}
@@ -55,8 +55,8 @@ export default function Test() {
                         </span>
                     </div>
                 </div>
-                <div className="border-red-300 border-3 flex flex-col justify-center">
-                    <div>My Tech Stack</div>
+                <div className="row-span-3 flex flex-col justify-center items-start">
+                    <div className="text-2xl font-medium">My Tech Stack</div>
                     <div className="flex flex-row flex-wrap gap-3">
                         {skills.map((skilltype, index) => {
                             const skillType = Object.keys(skilltype)[0];
@@ -83,6 +83,9 @@ export default function Test() {
                             );
                         })}
                     </div>
+                </div>
+                <div className="flex justify-start items-center p-2 text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 text-white hover:cursor-pointer">
+                    <Link href="/projects">Click here to view my projects</Link>
                 </div>
             </div>
         </>
