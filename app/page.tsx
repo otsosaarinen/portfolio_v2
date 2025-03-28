@@ -1,9 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import LinkedInLogo from "../public/LinkedIn logo.png";
-import GitHubLogo from "../public/GitHub logo.png";
 import { Badge } from "@/components/ui/badge";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -26,19 +23,20 @@ const skills: SkillType[] = [
     { Miscellaneous: ["REST API", "OAuth 2.0", "Gen AI", "Grafana", "GitHub"] },
 ];
 
-export default function Home() {
+export default function Test() {
     return (
         <>
-            <div className="w-full flex flex-row flex-wrap justify-around items-center">
-                <div className="flex flex-col justify-center items-start gap-5">
-                    <h1 className="text-2xl font-medium">Hey! My name is</h1>
-                    <h1 className="text-8xl font-extrabold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
-                        Otso Saarinen
-                    </h1>
-                    <h2 className="text-2xl font-medium">
-                        ICT engineering student
-                        <br />
-                        who likes building stuff with{" "}
+            <div className="grid grid-cols-2 gap-x-10 gap-y-2">
+                <div className="col-span-2 text-2xl font-medium">
+                    Hey! My name is
+                </div>
+                <div className="col-span-2 text-8xl font-extrabold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent border-transparent border-b-indigo-500 border-2">
+                    Otso Saarinen
+                </div>
+                <div className="flex justify-start items-center">
+                    <div className="text-2xl font-medium">
+                        ICT engineering student <br /> who likes building stuff
+                        with{" "}
                         <span className="text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
                             <Typewriter
                                 words={[
@@ -52,37 +50,9 @@ export default function Home() {
                                 typeSpeed={80}
                             />
                         </span>
-                    </h2>
-                    <div className="p-2 text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 text-white hover:cursor-pointer">
-                        <Link href="/projects">
-                            Click here to view my projects
-                        </Link>
-                    </div>
-                    <div className="flex flex-col gap-3">
-                        <div className="text-2xl font-medium">Contact me</div>
-                        <div className="flex flex-row gap-5">
-                            <Link href="https://github.com/otsosaarinen">
-                                <Image
-                                    src={GitHubLogo}
-                                    alt="GitHub logo"
-                                    width={50}
-                                    height={50}
-                                    className="object-contain"
-                                />
-                            </Link>
-                            <Link href="https://www.linkedin.com/in/otsosaarinen/">
-                                <Image
-                                    src={LinkedInLogo}
-                                    alt="LinkedIn logo"
-                                    width={50}
-                                    height={50}
-                                    className="object-contain"
-                                />
-                            </Link>
-                        </div>
                     </div>
                 </div>
-                <div className="flex flex-col justify-center items-start">
+                <div className="row-span-3 flex flex-col justify-center items-start">
                     <div className="text-2xl font-medium">My Tech Stack</div>
                     <div className="flex flex-row flex-wrap gap-3">
                         {skills.map((skilltype, index) => {
@@ -110,6 +80,9 @@ export default function Home() {
                             );
                         })}
                     </div>
+                </div>
+                <div className="flex justify-start items-center p-2 text-2xl font-semibold bg-linear-to-r from-sky-500 to-indigo-500 text-white hover:cursor-pointer">
+                    <Link href="/projects">Click here to view my projects</Link>
                 </div>
             </div>
         </>
