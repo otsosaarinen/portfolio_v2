@@ -31,6 +31,7 @@ export default function Test() {
           <div className="text-2xl font-medium">
             ICT engineering student <br /> who likes building stuff with{" "}
             <div className="bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-2xl font-semibold text-transparent sm:block md:inline">
+              {"\u200B"}
               <Typewriter
                 words={[
                   "React",
