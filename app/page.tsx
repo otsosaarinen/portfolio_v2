@@ -30,7 +30,7 @@ export default function Test() {
         <div className="flex items-center justify-start">
           <div className="text-2xl font-medium">
             ICT engineering student <br /> who likes building stuff with{" "}
-            <span className="bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-2xl font-semibold text-transparent">
+            <div className="bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-2xl font-semibold text-transparent sm:block md:inline">
               <Typewriter
                 words={[
                   "React",
@@ -42,7 +42,7 @@ export default function Test() {
                 ]}
                 typeSpeed={80}
               />
-            </span>
+            </div>
           </div>
         </div>
         <div className="flex flex-col items-start justify-center md:row-span-3">
