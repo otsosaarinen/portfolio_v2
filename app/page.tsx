@@ -30,7 +30,7 @@ export default function Test() {
                 <div className="md:col-span-2 text-2xl font-medium">
                     Hey! My name is
                 </div>
-                <div className="md:col-span-2 text-8xl font-extrabold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent border-transparent border-b-indigo-500 border-2">
+                <div className="md:col-span-2 md:text-8xl text-5xl font-extrabold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent border-transparent border-b-indigo-500 border-2">
                     Otso Saarinen
                 </div>
                 <div className="flex justify-start items-center">
