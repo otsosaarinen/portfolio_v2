@@ -26,11 +26,11 @@ const skills: SkillType[] = [
 export default function Test() {
     return (
         <>
-            <div className="grid grid-cols-2 gap-x-10 gap-y-2">
-                <div className="col-span-2 text-2xl font-medium">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8 md:gap-y-2">
+                <div className="md:col-span-2 text-2xl font-medium">
                     Hey! My name is
                 </div>
-                <div className="col-span-2 text-8xl font-extrabold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent border-transparent border-b-indigo-500 border-2">
+                <div className="md:col-span-2 text-8xl font-extrabold bg-linear-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent border-transparent border-b-indigo-500 border-2">
                     Otso Saarinen
                 </div>
                 <div className="flex justify-start items-center">
@@ -52,7 +52,7 @@ export default function Test() {
                         </span>
                     </div>
                 </div>
-                <div className="row-span-3 flex flex-col justify-center items-start">
+                <div className="md:row-span-3 flex flex-col justify-center items-start">
                     <div className="text-2xl font-medium">My Tech Stack</div>
                     <div className="flex flex-row flex-wrap gap-3">
                         {skills.map((skilltype, index) => {
