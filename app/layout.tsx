@@ -26,7 +26,7 @@ export default function RootLayout({
                 <main className="p-5 flex flex-grow justify-center items-center">
                     {children}
                 </main>
-                <footer className="h-auto w-full py-4 flex flex-row gap-4 justify-center items-center bg-indigo-500 text-white">
+                <footer className="h-auto w-full p-4 flex flex-row gap-4 justify-center items-center bg-indigo-500 text-white">
                     <Link
                         href={"https://vercel.com/home"}
                         className="hover:underline"
