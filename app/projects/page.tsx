@@ -133,7 +133,9 @@ export default function Projects() {
                     </AlertDialogDescription>
                   </AlertDialogHeader>
                   <AlertDialogFooter>
-                    <AlertDialogAction>Close</AlertDialogAction>
+                    <AlertDialogAction className="bg-indigo-500">
+                      Close
+                    </AlertDialogAction>
                   </AlertDialogFooter>
                 </AlertDialogContent>
               </AlertDialog>
